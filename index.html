@@ -396,6 +396,13 @@
         .recap.duo .shot { display: flex; }
         .recap.duo .shot img { height: 100%; max-height: none; min-height: 340px; }
         @media (max-width: 700px) { .recap.duo .recap-shots { grid-template-columns: 1fr 1fr; } .recap.duo .shot img { min-height: 0; aspect-ratio: 3 / 4; } }
+        .recap.wide.mas .recap-shots { grid-template-columns: repeat(6, 1fr); }
+        .recap.wide.mas .shot.land { grid-column: span 2; }
+        .recap.wide.mas .shot { display: flex; }
+        .recap.wide.mas .shot:not(.land) { grid-column: span 1; }
+        .recap.wide.mas .shot img { height: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+        .recap.wide.mas .shot.land img { aspect-ratio: 4 / 3; }
+        @media (max-width: 1000px) { .recap.wide.mas .recap-shots { grid-template-columns: repeat(2, 1fr); } .recap.wide.mas .shot, .recap.wide.mas .shot.land { grid-column: auto; } .recap.wide.mas .shot.land { grid-column: 1 / -1; } .recap.wide.mas .shot.land img { aspect-ratio: 3 / 2; } }
     </style>
 </head>
 <body>
@@ -508,7 +515,7 @@
         
 
         <div class="sec-divider" aria-hidden="true"><span></span></div>
-        <div class="card recap reveal duo" id="mas-la" data-section="MAS-LA" style="align-items: stretch;">
+        <div class="card recap reveal wide mas" id="mas-la" data-section="MAS-LA" style="align-items: stretch;">
             <div class="recap-text">
                 <div class="label">Recap &middot; Nov 29, 2025</div>
                 <h3 style="font-size: clamp(2rem, 4vw, 3.2rem); margin: .8rem 0 1.2rem;">MAS-LA 2025</h3>
@@ -522,7 +529,7 @@
                 </div>
                 <p style="font-size: 1.25rem; font-weight: 200; line-height: 1.6; color: var(--text-main);">The Furqaan booth at MAS-LA brought in <strong>$13,674</strong>, or <strong>131 boxes</strong>. And while we were there, we confirmed <strong>2 events on the spot</strong>, which led to <strong>3 others</strong> shortly after.</p>
             </div>
-            <div class="recap-shots"><figure class="shot "><img loading="lazy" width="1400" height="1050" src="images/photo-21.jpg" alt="The Furqaan Project booth at MAS-LA 2025"></figure><figure class="shot "><img loading="lazy" width="1050" height="1400" src="images/photo-24.jpg" alt="Imam Baksh&rsquo;s khutba before MAS-LA"><figcaption>Imam Baksh&rsquo;s khutba before MAS-LA</figcaption></figure></div>
+            <div class="recap-shots"><figure class="shot land"><img loading="lazy" width="1400" height="1050" src="images/photo-21.jpg" alt="The Furqaan Project booth at MAS-LA 2025"></figure><figure class="shot land"><img loading="lazy" width="1400" height="1050" src="images/photo-25.jpg" alt="Wessam with Imam Baksh and the team at the Furqaan booth, MAS-LA 2025"></figure><figure class="shot "><img loading="lazy" width="1050" height="1400" src="images/photo-24.jpg" alt="Imam Baksh&rsquo;s khutba before MAS-LA"><figcaption>Imam Baksh&rsquo;s khutba before MAS-LA</figcaption></figure><figure class="shot "><img loading="lazy" width="1050" height="1400" src="images/photo-26.jpg" alt="Wessam and volunteers at the Furqaan booth, MAS-LA 2025"></figure></div>
         </div>
 
         <div class="sec-divider" aria-hidden="true"><span></span></div>
