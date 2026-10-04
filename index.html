@@ -392,6 +392,10 @@
         .disclaimer { font-weight: 800; font-size: .95rem; color: var(--accent-gold); margin: 1.2rem 0 0; max-width: 760px; line-height: 1.45; padding-left: .9rem; border-left: 3px solid var(--accent-gold); }
         .foot-note { margin: 1.2rem auto 0; max-width: 560px; font-size: .85rem; line-height: 1.5; }
         .hero h2 { margin-top: 1.4rem !important; }
+        .recap.duo .recap-shots { grid-template-columns: 1.45fr 1fr; align-items: stretch; }
+        .recap.duo .shot { display: flex; }
+        .recap.duo .shot img { height: 100%; max-height: none; min-height: 340px; }
+        @media (max-width: 700px) { .recap.duo .recap-shots { grid-template-columns: 1fr 1fr; } .recap.duo .shot img { min-height: 0; aspect-ratio: 3 / 4; } }
     </style>
 </head>
 <body>
@@ -504,7 +508,7 @@
         
 
         <div class="sec-divider" aria-hidden="true"><span></span></div>
-        <div class="card recap reveal" id="mas-la" data-section="MAS-LA" style="align-items: stretch;">
+        <div class="card recap reveal duo" id="mas-la" data-section="MAS-LA" style="align-items: stretch;">
             <div class="recap-text">
                 <div class="label">Recap &middot; Nov 29, 2025</div>
                 <h3 style="font-size: clamp(2rem, 4vw, 3.2rem); margin: .8rem 0 1.2rem;">MAS-LA 2025</h3>
@@ -518,7 +522,7 @@
                 </div>
                 <p style="font-size: 1.25rem; font-weight: 200; line-height: 1.6; color: var(--text-main);">The Furqaan booth at MAS-LA brought in <strong>$13,674</strong>, or <strong>131 boxes</strong>. And while we were there, we confirmed <strong>2 events on the spot</strong>, which led to <strong>3 others</strong> shortly after.</p>
             </div>
-            <div class="recap-shots"><figure class="shot "><img loading="lazy" width="1400" height="1050" src="images/photo-21.jpg" alt="The Furqaan Project booth at MAS-LA 2025"></figure></div>
+            <div class="recap-shots"><figure class="shot "><img loading="lazy" width="1400" height="1050" src="images/photo-21.jpg" alt="The Furqaan Project booth at MAS-LA 2025"></figure><figure class="shot "><img loading="lazy" width="1050" height="1400" src="images/photo-24.jpg" alt="Imam Baksh&rsquo;s khutba before MAS-LA"><figcaption>Imam Baksh&rsquo;s khutba before MAS-LA</figcaption></figure></div>
         </div>
 
         <div class="sec-divider" aria-hidden="true"><span></span></div>
