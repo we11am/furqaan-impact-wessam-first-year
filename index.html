@@ -1793,12 +1793,12 @@
       }
       slider.addEventListener('input',function(){render(+slider.value);});
       var timer=null,play=document.getElementById('jrPlay');
-      function stop(){clearInterval(timer);timer=null;play.classList.remove('on');play.innerHTML='&#9654; Play the year';}
+      function stop(){clearTimeout(timer);timer=null;play.classList.remove('on');play.innerHTML='&#9654; Play the year';}
       play.addEventListener('click',function(){
         if(timer){stop();return;}
         if(+slider.value>=EV.length){slider.value=0;render(0);}
         play.classList.add('on');play.innerHTML='&#10073;&#10073; Pause';
-        timer=setInterval(function(){var v=+slider.value+1;slider.value=v;render(v);if(v>=EV.length)stop();},380);
+        var tick=function(){var v=+slider.value+1;slider.value=v;render(v);if(v>=EV.length){stop();return;}timer=setTimeout(tick,v<EV.length*0.3?380:190);};timer=setTimeout(tick,+slider.value<EV.length*0.3?380:190);
       });
       function fitCA(){var pts=EV.filter(function(e){return !e.hide&&(e.s==='CA'||e.s==='AZ');}).map(function(e){return [e.la,e.lo];});map.fitBounds(pts,{padding:[18,18]});}
       document.getElementById('jrAll').addEventListener('click',function(){map.fitBounds(EV.filter(function(e){return !e.hide;}).map(function(e){return [e.la,e.lo];}),{padding:[30,30]});});
