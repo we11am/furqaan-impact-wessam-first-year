@@ -6,7 +6,7 @@
     <title>Furqaan Impact Report - First Year</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;800&display=swap" rel="stylesheet">
         <meta name="description" content="One year with Furqaan Project.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Furqaan First Year Impact Report">
@@ -26,7 +26,7 @@
             --accent-green: #C71D22;
             --surface: #FFFFFF;
             --surface-border: #E7DFCF;
-            --font-family: 'Bricolage Grotesque', sans-serif;
+            --font-family: 'Outfit', sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -1658,7 +1658,7 @@
     </div>
 
     <script>
-        Chart.defaults.font.family = "'Bricolage Grotesque', sans-serif";
+        Chart.defaults.font.family = "'Outfit', sans-serif";
         Chart.defaults.color = '#6B6558'; Object.assign(Chart.defaults.plugins.tooltip,{backgroundColor:'#FFFFFF',titleColor:'#2B2B2B',bodyColor:'#2B2B2B',borderColor:'#E7DFCF',borderWidth:1,padding:12,boxPadding:4});
         
         new Chart(document.getElementById('regionChart'), {
@@ -2062,7 +2062,7 @@
     if (chartsReady || chartErr) return;
     try {
       if (typeof Chart === 'undefined') throw new Error('Chart.js unavailable');
-      Chart.defaults.font.family = "'Bricolage Grotesque', sans-serif"; Chart.defaults.color = '#6B6558';
+      Chart.defaults.font.family = "'Outfit', sans-serif"; Chart.defaults.color = '#6B6558';
       var o1 = baseOpts();
       o1.scales = { y: { beginAtZero: true, grid: { color: '#E7DFCF' }, ticks: { callback: function(v){ return '$' + (v/1000) + 'k'; } } }, x: { grid: { display: false } } };
       o1.plugins.tooltip.callbacks = { title: function(i){ return i[0].label; }, label: function(c){ var m = charts.st.d.M[c.dataIndex]; return money(m.t) + ' · ' + m.ev.length + ' event' + (m.ev.length>1?'s':''); } };
